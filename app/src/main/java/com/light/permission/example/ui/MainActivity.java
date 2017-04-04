@@ -1,4 +1,4 @@
-package com.light.permission.ui;
+package com.light.permission.example.ui;
 
 import android.Manifest;
 import android.app.Dialog;
@@ -20,7 +20,6 @@ import android.widget.Button;
 import com.light.permission.R;
 import com.light.permission.annotations.CheckPermissions;
 import com.light.permission.annotations.IsPermissionHandler;
-import com.light.permission.runtime.PermissionConfig;
 import com.light.permission.runtime.PermissionGrantedResult;
 import com.light.permission.runtime.PermissionHandler;
 import com.light.permission.runtime.PermissionProcessor;

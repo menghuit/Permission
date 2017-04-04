@@ -1,4 +1,4 @@
-package com.light.permission.ui;
+package com.light.permission.example.ui;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -14,9 +14,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-
-import com.light.permission.runtime.Operator;
-import com.light.permission.runtime.OperatorFactory;
 
 import java.util.ArrayList;
 import java.util.List;

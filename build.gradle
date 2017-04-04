@@ -1,13 +1,15 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.2'
-        classpath 'org.aspectj:aspectjtools:1.8.6'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0' // Remove it if you won't to publish SNAPSHOT version.
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -36,7 +38,7 @@ ext {
 def androidSupportVersion = '23.3.0'
 ext.deps = [
         // Android
-//        android: 'com.google.android:android:2.1.2',
+        android: 'com.google.android:android:2.1.2',
         supportv4: "com.android.support:support-v4:$androidSupportVersion",
         supportv7: "com.android.support:appcompat-v7:$androidSupportVersion",
         supportAnnotations: "com.android.support:support-annotations:$androidSupportVersion",
@@ -44,8 +46,9 @@ ext.deps = [
 
         // Third Party
         butterknife: 'com.jakewharton:butterknife:8.1.0',
-		butterknifeCompiler: 'com.jakewharton:butterknife-compiler:8.1.0',
+        butterknifeCompiler: 'com.jakewharton:butterknife-compiler:8.1.0',
         aspectjrt: 'org.aspectj:aspectjrt:1.8.6',
+        aspectjrtTools: 'org.aspectj:aspectjtools:1.8.6',
 
         // Test dependencies
         junit: 'junit:junit:4.12',
