@@ -98,6 +98,15 @@ public void onRequestPermissionsResult(int requestCode, @NonNull String[] permis
 }
 ```
 
+## ProGuard
+```
+-dontwarn com.light.permission.**
+-keep class com.light.permission.** { *; }
+# 这条主要是让被注解修饰的方法不被混淆
+-keepclassmembers class * {
+	@com.light.permission.annotations** <methods>;
+}
+```
 
 ## TODO
 
