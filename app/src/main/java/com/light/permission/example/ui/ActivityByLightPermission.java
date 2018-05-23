@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -29,7 +28,7 @@ import java.util.Arrays;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends /*BaseActivity*/AppCompatActivity {
+public class ActivityByLightPermission extends /*BaseActivity*/AppCompatActivity {
 
     @BindView(R.id.button)
     Button btn;
@@ -63,7 +62,7 @@ public class MainActivity extends /*BaseActivity*/AppCompatActivity {
             }
 
             final boolean finalShouldShowRationale = shouldShowRationale;
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(ActivityByLightPermission.this);
             builder.setMessage(shouldShowRationale ? "拒绝我！我想我需要跟你再解释解释" : "没有权限，我不干");
             builder.setPositiveButton("去设置", new DialogInterface.OnClickListener() {
                 @Override

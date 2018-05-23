@@ -22,7 +22,7 @@ import java.util.List;
  * Created by ZhangDi on 2017/3/21.
  */
 
-public class BaseActivity extends AppCompatActivity {
+public class ActivityTraditional extends AppCompatActivity {
     //是否跳转过应用程序信息详情页
     private boolean mIsJump2Settings = false;
     private final static int PERMISSION_REQUEST = 1200;
